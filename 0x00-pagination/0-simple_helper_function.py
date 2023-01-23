@@ -3,8 +3,10 @@
 Task 0. Simple helper funtion
 """
 
+from typing import Tuple
 
-def index_range(page, page_size):
+
+def index_range(page, page_size) -> Tuple:
     """
     args:
         page -> int
