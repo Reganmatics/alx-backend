@@ -40,8 +40,13 @@ class Server:
         return self.__indexed_dataset
 
     def get_hyper_index(self, index: int = None, page_size: int = 10) -> Dict:
-        """Hypermedia index 
+        """Hypermedia index
         """
+        '''
+        return {"index":,
+                "next_index": index + 1,
+                "page_size":,
+                "data":}'''
         dataset = self.indexed_dataset()
         data_length = len(dataset)
         assert 0 <= index < data_length
@@ -63,9 +68,3 @@ class Server:
         else:
             response['next_index'] = None
         return response
-        '''
-        return {"index":,
-                "next_index": index + 1,
-                "page_size":,
-                "data":}
-                '''
