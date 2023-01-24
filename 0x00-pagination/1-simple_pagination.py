@@ -15,8 +15,14 @@ def index_range(page, page_size):
 
     return -> tuple of size 2
     """
+    '''
     start = page * 10
     end = start + 15
+    '''
+    start, end = 0, 0
+    for i in range(page):
+        start = end
+        end += page_size
     return tuple((start, end))
 
 
