@@ -12,7 +12,9 @@ class MRUCache(BaseCaching):
 
     def put(self, key, item):
         """MRU implementation"""
-        if (key is not None) or (item is not None):
+        if (key is None) or (item is None):
+            pass
+        else:
             if len(self.cache_data) < BaseCaching.MAX_ITEMS:
                 self.cache_data[key] = item
             elif len(self.cache_data) >= BaseCaching.MAX_ITEMS:
